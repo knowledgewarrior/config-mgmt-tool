@@ -1,0 +1,28 @@
+- action: command
+  command: tail /var/log/cloud-init.log
+
+- action: command
+  command: ls -l /etc
+
+- action: system-update
+
+- action: add-package
+  package_name: rolldice
+
+- action: command
+  command: rolldice 3x3d20
+
+- action: add-package
+  package_name: nginx
+
+- action: remove-package
+  package_name: rolldice
+
+- action: stop-service
+  service_name: nginx
+
+- action: start-service
+  service_name: nginx
+
+- action: remove-package
+  package_name: nginx
