@@ -60,6 +60,10 @@ Install the preqrequisites.  Python3 and Pip3 are required, plus add libraries:
 
 ## Running wonoloconfigmgmt
 
+Change the `ec2_hostname` on line 64 to the URL or IP address of the EC2 host
+
+Run the script:
+
 `python3 wonoloconfigmgmt.py`
 
 The script will loop through the `config.yaml` file and perform actions as per requirements:

@@ -61,7 +61,7 @@ def ssh_disconnect(client):
 
 if __name__ == "__main__":
     # TBD: change from single hostname to an array of hostnames in the config.yaml file
-    ec2_hostname = 'ec2-3-239-247-106.compute-1.amazonaws.com'
+    ec2_hostname = 'ec2-x-x-x-x.compute-1.amazonaws.com'
     ec2_username = 'ubuntu'
     home_directory = os.path.expanduser( '~' )
     private_key_path = home_directory + '/.ssh/wonolo-key'
