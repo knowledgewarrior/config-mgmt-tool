@@ -1,6 +1,6 @@
 # Config Management Tool
 
-## Instructions
+## Introduction
  
 This is a simple configuration management tool similar to Ansible.
 
@@ -23,19 +23,19 @@ file (create/upload/delete remote file)
 
 ## Prerequisites
 
-Add VPC_ID and SUBNET_ID to the top of `create-instances.sh` script to create an EC2 instance.
+Add VPC_ID and SUBNET_ID to the top of `create-instances.sh` script to create EC2 instance(s).
 
 Install the preqrequisites.  Python3 and Pip3 are required, plus add libraries:
 
 `pip3 install -r requirements.txt`
 
-## Running wonoloconfigmgmt
+## Running config-mgmt
 
 Change the `ec2_hostname` on line 64 to the URL or IP address of the EC2 host
 
 Run the script:
 
-`python3 wonoloconfigmgmt.py`
+`python3 config-mgmt.py`
 
 The script will loop through the `config.yaml` file and perform actions as per requirements:
 
