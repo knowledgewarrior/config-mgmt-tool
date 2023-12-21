@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 # Creates prerequisites and an EC2 instance
-export PROJECT_NAME="wonolo-ec2"
+export PROJECT_NAME="config-mgmt-ec2"
 export INSTANCE_TYPE="t4g.micro"
 export INSTANCE_COUNT=1
 export VPC_ID="vpc-xxxxxxxxxx"
 export SUBNET_ID="subnet-xxxxxxxxxx"
-export SSH_KEY_NAME="wonolo-key"
+export SSH_KEY_NAME="config-mgmt-key"
 # ubuntu 18.04 in us-east-1
 export AMI_ID="ami-03d57c6f085140d11"
 
@@ -14,7 +14,7 @@ echo "creating security group"
 # create security group
 SECURITY_GROUP_ID=`aws ec2 create-security-group \
     --group-name $PROJECT_NAME-sg \
-    --description "Wonolo DevOps Assignment" \
+    --description "config-mgmt" \
     --tag-specifications 'ResourceType=security-group,Tags=[{Key=Name,Value=$PROJECT_NAME-sg}]' \
     --vpc-id $VPC_ID \
     --query "GroupId" \
